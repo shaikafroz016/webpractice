@@ -1,0 +1,303 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Shopping</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #camera {
+            background: linear-gradient(rgba(0,0,0,0.5),#009688), url(https://media.istockphoto.com/photos/this-one-match-perfect-with-me-picture-id1293366109?b=1&k=20&m=1293366109&s=170667a&w=0&h=2z_h2WlM3291IRKFXrdmtObnCt93rNNdNN6mqvnKD1I=);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+
+        .logo {
+            position: absolute;
+            top: 4%;
+            left: 10%;
+        }
+
+        .camera-text {
+            text-align: center;
+            color: #fff;
+            padding-top: 180px;
+        }
+
+            .camera-text h1 {
+                font-size: 100px;
+                font-family: 'Kaushan Script', cursive;
+            }
+
+            .camera-text p {
+                font-size: 20px;
+                font-style: italic;
+            }
+
+        .camera-btn {
+            margin: 70px auto 0;
+        }
+
+            .camera-btn a {
+                width: 150px;
+                text-decoration: none;
+                display: inline-block;
+                margin: 0 10px;
+                padding: 12px 0;
+                color: #fff;
+                border: .5px solid #fff;
+                position: relative;
+                z-index: 1;
+                transition: 0.5s;
+            }
+
+                .camera-btn a clip {
+                    width: 0%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: #fff;
+                    z-index: -1;
+                    transition: 0.5s;
+                }
+
+                .camera-btn a:hover clip {
+                    width: 100%
+                }
+
+                .camera-btn a:hover {
+                    color: #000;
+                }
+
+        #sidenav {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            right: -250px;
+            top: 0;
+            background: #009688;
+            z-index: 2;
+            transition: 0.5s
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 50px 20px;
+        }
+
+            nav ul li a {
+                text-decoration: none;
+                color: #fff;
+            }
+
+        #menubtn {
+            width: 50px;
+            height: 50px;
+            background: #009688;
+            text-align: center;
+            position: fixed;
+            right: 30px;
+            top: 20px;
+            border-radius: 3px;
+            z-index: 3;
+            cursor: pointer;
+        }
+
+            #menubtn img {
+                width: 20px;
+                margin-top: 15px;
+            }
+        /*--FEATURES--*/
+        #features {
+            background: linear-gradient(rgba(0,0,0,0.5),#009688), url(https://images.unsplash.com/photo-1568772370317-04109072ed08?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Y2FtZXJhJTIwbGVuc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            width: 100%;
+            padding: 70px 0;
+        }
+
+        .title-text {
+            text-align: center;
+            padding-bottom: 70px;
+        }
+
+            .title-text p {
+                font-size: 40px;
+                font-family: 'Kaushan Script', cursive;
+                color: azure;
+                font-weight: bold;
+                position: relative;
+                z-index: 1;
+            }
+
+            .title-text h1 {
+                font-size: 50px;
+            }
+
+        .feature-box {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+        }
+
+        .feature {
+            flex-basis: 50%;
+        }
+
+        .feature-img {
+            flex-basis: 50%;
+            margin: auto;
+        }
+
+            .feature-img img {
+                width: 70%;
+                border-radius: 10px;
+                height: 20
+            }
+
+        .feature h1 {
+            text-align: left;
+            margin-bottom: 10px;
+            font-weight: 100;
+            color: azure;
+        }
+
+        .feature-desc {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        #contact {
+            width: 100%;
+            padding: 70px 0;
+        }
+
+        .text {
+            text-align: center;
+            padding-bottom: 70px;
+        }
+
+            .text p {
+                margin: auto;
+                font-size: 20px;
+                color: azure;
+                font-weight: bold;
+                position: relative;
+                z-index: 1;
+            }
+
+        .p {
+            color: azure;
+        }
+
+        .feature-text p {
+            color: azure;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="camera">
+
+        <div class="camera-text">
+            <h1>CartMax</h1>
+            <p> STYLE is a way to say who you are..</p>
+            <div class="camera-btn">
+                <a href="/Shopping/login_controls?select1=Admin_User"><clip></clip> ADMIN LOGIN</a>
+                <a href="/Shopping/login_controls?select1=Cutomer_User"><clip></clip> CUSTOMER LOGIN</a>
+            </div>
+        </div>
+
+    </section>
+    <div id="sidenav">
+        <nav>
+            <ul>
+                <li><a href="#"> CartMax Plus</li>
+                <li><a href="#"> All Categories</li>
+                <li><a href="#"> Offer Zone</li>
+                <li><a href="#"> My Orders </li>
+                <li><a href="#"> Help Centre </li>
+                <li><a href="#"> CONTACT US </li>
+            </ul>
+        </nav>
+    </div>
+    <div id="menubtn">
+        <img src="https://cdn-icons-png.flaticon.com/128/56/56763.png" id="menu">
+    </div>
+
+    <!--FEATURES-->
+    <section id="features">
+
+        <div class="title-text">
+            <p>Style Your Life</p>
+
+        </div>
+        <div class="feature-box">
+            <div class="feature">
+                <h1 style="font-size: 40px;"><em>ABOUT US</h1>
+                <div class="feature-desc">
+                    <div class="feature-icon"></div>
+                    <div class="feature-text">
+                        <p>
+                            CARTMAX is a india's biggest Online shopping app. It is established in 2008.
+                            This the Covid Crisis time so no one will choose to go for Shopping.
+                        </p>
+                        <p style="font-size: 30px; font-family: 'Kaushan Script', cursive;">
+                            <b>
+                                HAKUNA MATATA
+                            </b>
+                        </p>
+                        <p>CARTMAX is here now to help you</p>
+                        <p>We are here to Change your Style. Choose What You need and order it now and get Safest Delivery.</p>
+                        <p>Thousands of Products will there to choose, Every product will satisfy the Customer Expectations. We hope all the customers having a very healthy life with your families.Thanks For choosing <em>CARTMAX</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-img">
+                <img src="https://images.unsplash.com/photo-1573855619003-97b4799dcd8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" width="100" height="300">
+            </div>
+        </div>
+    </section>
+    <section id="contact us">
+        <div class="text">
+
+            <p>CONTACT US</p>
+
+        </div>
+    </section>
+
+</body>
+</html>
+<script type="text/javascript">
+ 	var menubtn = document.getElementById('menubtn')
+ 	var sidenav = document.getElementById('sidenav')
+ 	var menu = document.getElementById('menu')
+
+ 	menubtn.onclick = function(){
+ 		if (sidenav.style.right == "-250px") {
+ 			sidenav.style.right = "0";
+ 		} else {
+ 			sidenav.style.right = "-250px";
+ 		}
+ 	}
+</script>
+
+
+</div>

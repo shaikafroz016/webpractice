@@ -1,0 +1,43 @@
+﻿@model List<myproj.product>
+@{
+    ViewBag.Title = "prd_page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>prd_page</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>prd_page</title>
+</head>
+<body>
+    <h1><u>Welcome to Product Mart Shpping Details</u></h1>
+    <hr />
+    <hr />
+    <select id="Select1" name="select1">
+        <option>Select Different Product on Choice</option>
+        <option>Laptop</option>
+        <option>Mobiles</option>
+        <option>Books</option>
+        <option>Dresses</option>
+    </select>
+    <input type="Button" id="b1" value="  Search Product" />
+    <hr/>
+    <table class="table table-striped table-bordered" style="width:auto">
+        <tr><th>Names (click to open)</th></tr>
+        @foreach (var x in Model)
+        {<tr>
+            <td>
+                @Html.ActionLink(x.prodname, "prd_details", new { x.prodid })
+            </td>
+        </tr>
+        }
+    </table>
+    <hr />
+    <hr />
+</body>
+</html>
+

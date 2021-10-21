@@ -1,0 +1,32 @@
+﻿@model myproj.product
+@{
+    ViewBag.Title = "prd_details_admin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>prd_details_admin</h2>
+
+<form action="prd_updtae" id="sk" name="sk">
+    <table>
+        <tr>
+            <td>product id</td>
+            <td><input type="number" value="@Model.prodid" id="id" name="id" /></td>
+        </tr>
+        <tr>
+            <td>product name</td>
+            <td><input type="text" value="@Model.prodname" id="prdname" name="prdname"/></td>
+        </tr>
+        <tr>
+            <td>Product catg</td>
+            <td><input type="text" value="@Model.prodcatg" id="prdc" name="prdc"/></td>
+        </tr>
+        <tr>
+            <td>roduct price</td>
+            <td><input type="text" value="@Model.prodprice" id="prdpr" name="prdpr"/></td>
+        </tr>
+        <tr>
+            <td><input type="submit" vlaue="Update"/></td>
+        </tr>
+    </table>
+</form>
+@ViewBag.status

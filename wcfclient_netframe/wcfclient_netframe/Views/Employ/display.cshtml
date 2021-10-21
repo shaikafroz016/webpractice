@@ -1,0 +1,40 @@
+﻿@model IList<wcfclient_netframe.ServiceReference1.emp>
+@{
+    ViewBag.Title = "display";
+}
+
+<h2>display</h2>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Emp_GetRec</title>
+</head>
+<body>
+    <table border="1" width="60%" bgcolor="yellow">
+        <tr>
+            <th>EmpNo</th>
+            <th>Empname</th>
+            <th>Job</th>
+            <th>DeptNo</th>
+            <th>salary</th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(model => x.empno)</td>
+
+                <td>@Html.DisplayFor(model => x.empname)</td>
+
+                <td> @Html.DisplayFor(model => x.job)</td>
+
+                <td> @Html.DisplayFor(model => x.deptno)</td>
+
+                <td> @Html.DisplayFor(model => x.salary)</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Admin_Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Admin_Login</h2>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Admin</title>
+</head>
+<body>
+    <h1>Welcome Admin Login Page</h1>
+    <form action="admin_pannel" method="post" id="sk">
+    <table>
+        <tr>
+            <td>UserName</td>
+            <td><input type="text" id="text1" name="text1" /></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" id="text2" name="text2" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" id="submit1" name="submit1" value="Login" /></td>
+            <td></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

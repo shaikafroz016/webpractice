@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Shopping_portal1.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="container">
+    <p>
+        <a class="btn  btn-success" href="/Products/Create" role="button">Add product</a>
+        
+    </p>
+    <table class=" table table-hover success">
+        <tr>
+            <th>
+                P_Name
+            </th>
+            <th>
+                P_Category
+            </th>
+            <th>
+                P_Description
+            </th>
+            <th>
+                P_price
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.prdname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.prdcatg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.price)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.prdid }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.prdid }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.prdid })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>

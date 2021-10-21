@@ -1,0 +1,47 @@
+﻿@model Shopping_portal1.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <h2>Product Details</h2>
+    <hr />
+    <dl class="dl-horizontal "style="font-size:18px">
+        <dt>
+            @Html.DisplayNameFor(model => model.prdname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prdname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prdcatg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prdcatg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+    </dl>
+</div>
+

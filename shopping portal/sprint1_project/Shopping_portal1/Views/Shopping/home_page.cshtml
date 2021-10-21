@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "home_page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>home_page</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>home_page</title>
+</head>
+<body>
+    <h1> Welcome to Webshopping Portal </h1>
+    <hr />
+    <h2>Select User Type to Login</h2>
+    <form id="form1" action="login_controls" method="get">
+        <select id="select1" name="select1" onchange="this.form.submit()">
+            <option>Select User</option>
+            <option>Admin_User</option>
+            <option>Cutomer_User</option>
+        </select>
+        
+    </form>
+</body>
+</html>
