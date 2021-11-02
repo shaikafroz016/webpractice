@@ -1,0 +1,91 @@
+﻿@model apiclientm2.Models.Product
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@*@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Product</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.prd_name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.prd_name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.prd_name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.prd_catg, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.prd_catg, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.prd_catg, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.price, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.price, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.price, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.desc, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.desc, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.desc, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}*@
+<form id="shaik" action="Create" method="post">
+    <table>
+        <tr>
+            @Html.HiddenFor(x=>x.Id)
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(x=>x.prd_name)</td>
+            <td>@Html.EditorFor(x=>x.prd_name)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(x=>x.prd_catg)</td>
+            <td>@Html.EditorFor(x=>x.prd_catg)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(x=>x.desc)</td>
+            <td>@Html.EditorFor(x=>x.desc)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(x=>x.price)</td>
+            <td>@Html.EditorFor(x=>x.price)</td>
+        </tr>
+        <tr>
+            <input type="submit" id="Create" value="Save" />
+        </tr>
+    </table>
+</form>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

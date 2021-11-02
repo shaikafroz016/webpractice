@@ -47,7 +47,7 @@ namespace Shopping_portal1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "prdid,prdname,prdcatg,description,price")] Product product)
+        public ActionResult Create(Product product)
         {
             if (ModelState.IsValid)
             {
